@@ -9,7 +9,6 @@ class GA4Controller:
 
     def query_report(self, ga4_query_report: GA4RerportDTO):
         try:
-            # Llamar al método execute_report en tu use_case
             return self.use_case.execute_report(
                 ga4_query_report.report_type,
                 ga4_query_report.start_date,
