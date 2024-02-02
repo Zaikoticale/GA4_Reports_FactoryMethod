@@ -12,9 +12,7 @@ class ExecuteGA4ReportUseCase:
 
         try:
             result = self.connection.query_report(report)
-            # Extract the headers' names from dimension_headers and metric_headers
             headers = [header.name for header in result.dimension_headers] + [header.name for header in result.metric_headers]
-            # Extract the rows of data
             rows = [[value.value for value in row.dimension_values] + [value.value for value in row.metric_values] for row in result.rows]
             result_dict = {
                 'rows': rows,

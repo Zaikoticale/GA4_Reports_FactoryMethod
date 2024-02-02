@@ -1,11 +1,10 @@
-# connection.py
 import os
 from dotenv import load_dotenv
 from google.auth.transport.requests import Request
 from google.oauth2.service_account import Credentials
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import RunReportRequest, DateRange, Dimension, Metric
-from src.view.ga4_report_dto import GA4_Query_Report  # Asegúrate de que esta importación es correcta
+from src.view.ga4_report_dto import GA4_Query_Report  
 
 class GA4Exception(Exception):
     '''Base class for GA4 exceptions'''
