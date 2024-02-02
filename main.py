@@ -1,9 +1,9 @@
 import os
 import pandas as pd
-from src.infraestructure.ga4_conection import GA4Connection
-from src.view.ga4_controller import GA4Controller
-from src.usecase.ga4_usecase import ExecuteGA4ReportUseCase
-from src.domain.ga4_domain import GA4ReportFactory
+from src.infraestructure.ga4_report_conection import GA4Connection
+from src.view.ga4_report_controller import GA4Controller
+from src.usecase.ga4_report_generate_usecase import ExecuteGA4ReportUseCase
+from src.domain.ga4_report_domain import GA4ReportFactory
 from datetime import datetime, timedelta
 
 start_date_str = "2023-07-01"
